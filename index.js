@@ -9,13 +9,14 @@ app.use(cors());
 
 let nextId = 1;
 
+const getPrice = () => parseFloat((Math.random() * 999).toFixed(2));
 const makeItem = () => {
   nextId += 1;
 
   return {
     id: nextId,
     name: faker.commerce.productName(),
-    price: faker.commerce.price(),
+    price: getPrice(),
   }
 }
 
@@ -42,7 +43,7 @@ app.listen(PORT, () => {
 
     // Randomly update an item in the array.
     if (Math.random() > 0.5) {
-      items[Math.floor(Math.random() * items.length)].price = faker.commerce.price();
+      items[Math.floor(Math.random() * items.length)].price = getPrice();
     }
   }, 1000);
 });
