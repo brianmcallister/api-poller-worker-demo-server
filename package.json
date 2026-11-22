@@ -1,17 +1,13 @@
 {
-  "name": "demo-server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "api-poller-worker-demo-server",
+  "version": "2.0.0",
+  "description": "A fake, constantly changing products API for the api-poller-worker demo",
+  "private": true,
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dev.js"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "cors": "2.8.5",
-    "express": "4.17.1",
-    "faker": "4.1.0"
-  }
+  "engines": {
+    "node": "22.x"
+  },
+  "license": "ISC"
 }
